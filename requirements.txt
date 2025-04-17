@@ -1,0 +1,5 @@
+flask==2.0.1
+tensorflow==2.6.0
+numpy==1.19.5
+nltk==3.6.2
+pickle-mixin==1.0.2

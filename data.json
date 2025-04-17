@@ -1,0 +1,344 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi", "Hello", "Hey", "Greetings", "Good morning",
+        "Good afternoon", "Good evening", "Hi there",
+        "Hello there", "Hey there", "What's up?", "Howdy",
+        "Morning", "Afternoon", "Evening"
+      ],
+      "responses": [
+        "Hello! Welcome to our coffee shop. How can I help you today?",
+        "Hi there! What can we brew for you today?",
+        "Good day! Ready to order your favorite coffee?",
+        "Welcome back! Great to see you again."
+      ]
+    },
+    {
+      "tag": "menu",
+      "patterns": [
+        "What do you serve?", "Tell me about your menu",
+        "What are the options?", "Menu", "What's on your menu?",
+        "What drinks do you have?", "Show me your offerings",
+        "What can I order?", "What's available?"
+      ],
+      "responses": [
+        "We have a wonderful selection of coffee drinks! Our menu includes espresso, latte, cappuccino, americano, flat white, cold brew, mocha, and seasonal specials.",
+        "Here's what we're brewing today: espresso, latte, cappuccino, flat white, cold brew, and our signature mocha. Can I tell you more about any of these?",
+        "Our full menu includes hot and cold coffee beverages, teas, and delicious pastries. Would you like to hear about a specific category?"
+      ]
+    },
+    {
+      "tag": "order",
+      "patterns": [
+        "I'd like to order", "Can I get a coffee?",
+        "What's your recommendation?", "Order",
+        "I want to order something", "Ready to order",
+        "Let me order", "I'll take something"
+      ],
+      "responses": [
+        "Certainly! What type of coffee would you like to order?",
+        "Great choice! What can I get for you today?",
+        "We have many delicious options. What would you like?"
+      ]
+    },
+    {
+      "tag": "order_specific",
+      "patterns": [
+        "I want a latte", "Can I have an espresso?",
+        "Get me a cappuccino please", "I'd like a mocha",
+        "I want a flat white", "Give me a cold brew",
+        "I'd like a caramel macchiato", "Can I order a vanilla latte?",
+        "One americano please", "Make it a macchiato",
+        "I'll take a mocha latte", "Hazelnut latte please",
+        "Pumpkin spice latte", "Iced coffee please"
+      ],
+      "responses": [
+        "Great choice! A %s coming right up. Would you like to customize it (size, milk, sugar)?",
+        "One %s, got it! Would you like to add any extras?",
+        "Sure! %s it is. Let me know if you'd like it hot or iced.",
+        "Absolutely! Do you want your %s in small, medium, or large?",
+        "You've got it – a %s. Anything else you'd like to add to your order?"
+      ],
+      "context": ["order"]
+    },
+    {
+      "tag": "order_drink_size",
+      "patterns": [
+        "small", "medium", "large",
+        "I'll take a small", "medium size please",
+        "make it large", "the biggest size you have",
+        "regular size", "just a small one",
+        "large please", "make that a medium"
+      ],
+      "responses": [
+        "Great! A %size %drink coming right up. Would you like anything else?",
+        "Perfect choice! Your %size %drink will be ready soon."
+      ],
+      "context": ["order_specific"]
+    },
+    {
+      "tag": "customize_order",
+      "patterns": [
+        "Can I get almond milk?", "Make it a large",
+        "Add two sugars", "No cream please",
+        "Can I have it iced?", "Extra shot of espresso",
+        "Make it decaf", "With oat milk",
+        "Light on the sugar", "Extra foam",
+        "No sugar", "Soy milk please",
+        "Half sweet", "Double shot"
+      ],
+      "responses": [
+        "Sure! I've updated your drink with that customization.",
+        "Absolutely. Your preferences have been noted.",
+        "Got it! Your drink will be prepared just how you like it.",
+        "Perfect! Customization added to your order."
+      ],
+      "context": ["order_specific"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thank you", "Thanks", "Appreciate it",
+        "Thanks a lot", "Thank you very much",
+        "Thanks a bunch", "Much appreciated",
+        "I appreciate it"
+      ],
+      "responses": [
+        "You're welcome! If you have any more questions, feel free to ask.",
+        "No problem! Enjoy your coffee!",
+        "Our pleasure! Come back soon.",
+        "Happy to help! Have a wonderful day."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Goodbye", "See you later", "Bye",
+        "Farewell", "Have a good one",
+        "See you soon", "Take care",
+        "Until next time", "Bye bye"
+      ],
+      "responses": [
+        "Goodbye! Have a wonderful day.",
+        "See you later! Come back soon for more great coffee.",
+        "Farewell! We'll have fresh coffee waiting for your next visit.",
+        "Take care! Enjoy the rest of your day."
+      ]
+    },
+    {
+      "tag": "recommendation",
+      "patterns": [
+        "What's your best drink?", "What's most popular?",
+        "Any recommendations?", "What do people usually get?",
+        "What's your recommendation?", "Can you suggest something?",
+        "Recommendation", "What should I try?",
+        "I'm not sure what to order", "Help me choose"
+      ],
+      "responses": [
+        "Our most popular items are the caramel macchiato and the classic Americano. Both are excellent choices!",
+        "For something sweet, you might enjoy our mocha latte. It's a customer favorite!",
+        "If you like strong coffee, I'd recommend our espresso or cold brew. For something creamier, try our latte or cappuccino."
+      ]
+    },
+    {
+      "tag": "hours",
+      "patterns": [
+        "What are your opening hours?", "When do you open?",
+        "Closing time", "Business hours",
+        "Are you open now?", "What time do you close?",
+        "When are you open until?", "Opening times"
+      ],
+      "responses": [
+        "We're open from 7 AM to 9 PM every day. Come by anytime during our business hours!",
+        "Our hours are 7 AM to 9 PM daily. We'd love to see you!",
+        "You can visit us any day from 7 in the morning until 9 in the evening."
+      ]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where are you located?", "Address",
+        "How do I get to your coffee shop?", "Location",
+        "What's your address?", "Where is this place?",
+        "Directions to your shop", "Map location"
+      ],
+      "responses": [
+        "Our coffee shop is located at 123 Main Street. We look forward to seeing you!",
+        "You can find us at 123 Main Street. Easy to spot with our big red awning!",
+        "We're at 123 Main Street, right between the bookstore and the flower shop."
+      ]
+    },
+    {
+      "tag": "specials",
+      "patterns": [
+        "Do you have any specials?", "Special offers",
+        "Deals", "Promotions", "Discounts",
+        "Any current promotions?", "Today's specials",
+        "What's on special?", "Happy hour"
+      ],
+      "responses": [
+        "Yes, we have daily specials! Today we're offering 20% off all cold brews and a free pastry with any large latte.",
+        "Our current promotion is buy one get one free on all espresso drinks from 2-4 PM daily!",
+        "Check our board for today's specials - we rotate them regularly to keep things exciting!"
+      ]
+    },
+    {
+      "tag": "happy_hour",
+      "patterns": [
+        "Tell me about happy hour", "Happy hour deals",
+        "When is happy hour?", "Discount hours",
+        "Best time for deals", "Cheap coffee times"
+      ],
+      "responses": [
+        "Our happy hour is from 4 PM to 6 PM with 20% off selected drinks!",
+        "During happy hour (4-6 PM), enjoy discounts on your favorite coffees!",
+        "Come between 4-6 PM for our happy hour specials - great coffee at even better prices!"
+      ]
+    },
+    {
+      "tag": "full_menu",
+      "patterns": [
+        "I want the full menu", "Show me all drinks",
+        "Complete list of drinks", "Full drink options",
+        "Everything you offer", "All menu items",
+        "Detailed menu", "Entire selection"
+      ],
+      "responses": [
+        "Here's our full drink list: Espresso, Americano, Cappuccino, Latte, Flat White, Mocha, Macchiato, Cold Brew, Iced Coffee, and seasonal specials. We also offer teas and hot chocolate!",
+        "Our complete menu includes: Coffee drinks (espresso-based and brewed), teas, hot chocolate, and a selection of pastries. Would you like details on any category?"
+      ]
+    },
+    {
+      "tag": "sizes",
+      "patterns": [
+        "What sizes do you have?", "Available sizes?",
+        "Can I choose a size?", "Size options",
+        "How big are your drinks?", "Cup sizes",
+        "Small medium large?", "Different sizes"
+      ],
+      "responses": [
+        "We offer three sizes: Small (8 oz), Medium (12 oz), and Large (16 oz). Which one would you like for your drink?",
+        "You can choose between Small (8 oz), Medium (12 oz), or Large (16 oz). What's your preference?"
+      ]
+    },
+    {
+      "tag": "payment",
+      "patterns": [
+        "How can I pay?", "Do you take cards?",
+        "Can I use Apple Pay?", "Do you accept cash?",
+        "What payment methods do you support?", "Payment options",
+        "Credit cards okay?", "Mobile payments?"
+      ],
+      "responses": [
+        "We accept cash, credit/debit cards, and mobile payments like Apple Pay and Google Pay.",
+        "You can pay using card, cash, or contactless methods. Whatever is convenient for you!",
+        "Absolutely! We support all major payment methods including digital wallets."
+      ]
+    },
+    {
+      "tag": "payment_method",
+      "patterns": [
+        "I'll pay with card", "cash please",
+        "Apple Pay", "Google Pay", "credit card",
+        "debit card", "contactless", "Visa",
+        "Mastercard", "with cash"
+      ],
+      "responses": [
+        "Got it! We accept that payment method.",
+        "Perfect! Your payment method has been noted."
+      ],
+      "context": ["payment"]
+    },
+    {
+      "tag": "order_confirmation",
+      "patterns": [
+        "that's all", "I'm done ordering",
+        "yes, that's it", "no, thank you",
+        "that's my order", "nothing else",
+        "that's everything", "just those"
+      ],
+      "responses": [
+        "Perfect! Your order will be ready in about 5 minutes. Please proceed to the counter when your name is called!",
+        "Great choices! We're preparing your order now. Thank you for visiting us!"
+      ]
+    },
+    {
+      "tag": "order_status",
+      "patterns": [
+        "How long will my order take?", "Is my coffee ready?",
+        "When will it be done?", "Order status?",
+        "Is it ready yet?", "How much longer?",
+        "Status of my order", "Waiting for my drink"
+      ],
+      "responses": [
+        "It usually takes 5-7 minutes. We'll call your name once it's ready!",
+        "We're preparing your drink right now. It won't be long!",
+        "Hang tight! Your coffee will be ready shortly.",
+        "Your order is in progress. Thanks for your patience!"
+      ]
+    },
+    {
+      "tag": "food_addon",
+      "patterns": [
+        "Do you have pastries?", "Can I get a muffin with that?",
+        "I'd like a croissant", "Add a slice of cake",
+        "Any snacks available?", "Food options",
+        "Something to eat", "Baked goods"
+      ],
+      "responses": [
+        "Yes, we have a fresh selection of pastries! Would you like to add a muffin, croissant, or something sweet?",
+        "Of course! We have muffins, cookies, croissants, and cakes. What would you like to add?",
+        "Definitely! Our pastries are baked fresh daily. What would you like with your coffee?"
+      ]
+    },
+    {
+      "tag": "seasonal_specials",
+      "patterns": [
+        "any seasonal drinks?", "what's special today?",
+        "limited time offers", "holiday drinks",
+        "winter specials", "summer specials",
+        "fall drinks", "spring menu"
+      ],
+      "responses": [
+        "Right now we're featuring our Pumpkin Spice Latte and Maple Pecan Cold Brew for the fall season!",
+        "Our seasonal specials include Peppermint Mocha for winter and Iced Coconut Latte for summer."
+      ]
+    },
+    {
+      "tag": "remember_customer",
+      "patterns": [
+        "do you remember me?", "I come here often",
+        "I'm a regular", "remember my usual",
+        "know my order", "my regular drink"
+      ],
+      "responses": [
+        "Of course! You're the %usual_order person, right? Would you like your usual today?",
+        "Welcome back! Shall I prepare your regular %usual_order?"
+      ]
+    },
+    {
+      "tag": "complaint",
+      "patterns": [
+        "my order was wrong", "this isn't what I ordered",
+        "I have a complaint", "you made a mistake",
+        "this coffee is cold", "this tastes bad",
+        "not what I asked for", "wrong drink"
+      ],
+      "responses": [
+        "I'm so sorry to hear that! Please let our staff know and we'll make it right immediately.",
+        "Oh no! We want you to love your coffee. Please speak with our manager so we can fix this for you."
+      ]
+    },
+    {
+      "tag": "out_of_scope",
+      "patterns": [],
+      "responses": [
+        "I'm just a coffee bot, so I can only help with coffee-related questions!",
+        "Sorry, I'm only programmed to talk about coffee. How can I help with your order?",
+        "That's beyond my barista skills! Can I help you with our menu or an order instead?"
+      ]
+    }
+  ]
+}
