@@ -1,6 +1,6 @@
 # ☕ CoffeeBot - Premium Virtual Barista Assistant
 
-**A state-of-the-art conversational AI solution for coffee shops** powered by Flask and TensorFlow/Keras, featuring meticulously handcrafted training data.
+**A state-of-the-art conversational AI solution for coffee shops (NN)** powered by Flask and TensorFlow/Keras, featuring meticulously handcrafted training data.
 
 ![CoffeeBot Demo](https://example.com/coffeebot-demo.gif) *Replace with actual demo GIF*
 
