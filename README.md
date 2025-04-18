@@ -2,8 +2,7 @@
 
 **A state-of-the-art conversational AI solution for coffee shops (NN)** powered by Flask and TensorFlow/Keras, featuring meticulously handcrafted training data.
 
-![CoffeeBot Demo](https://example.com/coffeebot-demo.gif) *Replace with actual demo GIF*
-
+![Coffee Shop Chatbot Preview](static/images/coffee_shop.png)
 ## 🌟 Premium Features
 
 ### Artisanal Conversation Engine
